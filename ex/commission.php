@@ -6,7 +6,7 @@
     <title>คำนวณค่าคอมมิชชั่น ขายตรง บริษัท แอมเรย์ จำกัด</title>
 </head>
 <body>
-    <form action="commission.php" medthod="post">
+    <form action="commission.php" method="post">
         กรุณาระบุยอดขายสบู่เหลว: <input name="soap" type="text"><br>
         กรุณาระบุยอดขายยาสีฟัน: <input name="toothpaste" type="text"><br>
         กรุณาระบุยอดขายโฟมล้างหน้า: <input name="facialfoam" type="text"><br>
