@@ -7,8 +7,11 @@
 </head>
 <body>
     <?php
-        $b = 30;
-        echo "\$b = $b <br>"; 
+        $str = "nooknet ok";
+        echo "String find: \"$str\"<hr>";
+
+        echo "<b> find by strpos </b><br>";
+        $pos1 = strpos($str, "ok");
     ?>
 </body>
 </html>
