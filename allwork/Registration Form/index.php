@@ -1,11 +1,13 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!-- header -->
+<?php
+    include("../../../webapp/ex-project/template/header.php");
+?>
+
+<!-- menu -->
+<?php
+    include("../../../webapp/ex-project/template/menu.php");
+?>
+
     <h3>Registration Form</h3>
     <Form name="registration" method="post" action="./registored.php" enctype="multipart/form-data">
         <!-- Full name -->
@@ -75,5 +77,7 @@
         <input type="reset" name="reset">
     </Form>
     
-</body>
-</html>
+<!-- footer -->
+<?php
+    include("../../../webapp/ex-project/template/footer.php");
+?>

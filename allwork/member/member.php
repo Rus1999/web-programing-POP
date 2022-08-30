@@ -1,10 +1,13 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ฟอร์มรับค่าข้อมูล</title>
-</head>
+<!-- header -->
+<?php
+    include("../../../webapp/ex-project/template/header.php");
+?>
+
+<!-- menu -->
+<?php
+    include("../../../webapp/ex-project/template/menu.php");
+?>
+
 <body>
     <form name="frm" method="post" action="./pro_member.php" enctype="multipart/form-data">
         <!-- textbox -->
@@ -47,5 +50,8 @@
         
         
     </form>
-</body>
-</html>
+
+<!-- footer -->
+<?php
+    include("../../../webapp/ex-project/template/footer.php");
+?>
