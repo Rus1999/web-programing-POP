@@ -12,7 +12,7 @@
         <tr>
             <!-- table data -->
             <td valign="top" width="70%" bgcolor="skyblue" colspan="2" >
-                <img src="./banner.png" alt="banner" width="100%">
+                <img src="./images/banner.png" alt="banner" width="100%">
             </td>
         </tr>
         <tr>
