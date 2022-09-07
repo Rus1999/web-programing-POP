@@ -1,12 +1,12 @@
 <!-- template -->
 <!-- header -->
 <?php
-    include("./template/header.php");
+    include("./header.php");
 ?>
 
 <!-- menu -->
 <?php
-    include("./template/menu.php");
+    include("./menu.php");
 ?>
 
 <!-- content -->
@@ -16,5 +16,5 @@
 
 <!-- footer -->
 <?php
-    include("./template/footer.php");
+    include("./footer.php");
 ?>

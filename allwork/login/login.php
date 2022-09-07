@@ -1,12 +1,12 @@
 <!-- login -->
 <!-- header -->
 <?php
-    include("../../../webapp/ex-project/template/header.php");
+    include("../../ex-project/header.php");
 ?>
 
 <!-- menu -->
 <?php
-    include("../../../webapp/ex-project/template/menu.php");
+    include("../../ex-project/menu.php");
 ?>
 
 <!-- content -->
@@ -36,5 +36,5 @@
 
 <!-- footer -->
 <?php
-    include("../../../webapp/ex-project/template/footer.php");
+    include("../../ex-project/footer.php");
 ?>
