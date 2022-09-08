@@ -5,6 +5,7 @@
                 - <a href="./regisform.php">สมัครสมาชิก</a><br>
                 - <a href="./member.php">ฟอร์มผู้ใช้งานระบบ</a><br>
                 - <a href="./ex3.php">สูตรคูณ</a><br>
+                - <a href="./faculty_show.php">จัดการข้อมูลคณะ</a><br>
                 
             </td>
-            <td valign="top" bgcolor="#cffcae">
+            <td valign="top">

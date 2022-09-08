@@ -11,7 +11,7 @@
         <!-- table row -->
         <tr>
             <!-- table data -->
-            <td valign="top" width="70%" bgcolor="skyblue" colspan="2" >
+            <td valign="top" width="70%" colspan="2" >
                 <img src="./images/banner.png" alt="banner" width="100%">
             </td>
         </tr>
