@@ -17,7 +17,7 @@
     </tr>
     <tr>
         <td>
-            <table align="center" border="1px">
+            <table border="1px">
                 <tr>
                     <td align="center">รหัส</td>
                     <td align="center">คำนำหน้าชื่อภาษาไทย</td>

@@ -22,3 +22,7 @@
   touch-action: manipulation;
   text-decoration: none;
 }
+
+body {
+  background-color: rgb(255, 92, 53);
+}

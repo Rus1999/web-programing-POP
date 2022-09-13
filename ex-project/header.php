@@ -7,8 +7,8 @@
     <title>ระบบบริหารจัดการโครงงาน</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <table border="0" align="center" width="70%">
+<body bgcolor="#525252">
+    <table border="0" align="center" width="70%" bgcolor="#ffd9d9">
         <!-- table row -->
         <tr>
             <!-- table data -->
