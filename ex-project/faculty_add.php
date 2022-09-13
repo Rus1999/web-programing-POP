@@ -1,43 +1,33 @@
-<!-- template -->
-<!-- header -->
 <?php
     include("./header.php");
-?>
-
-<!-- menu -->
-<?php
     include("./menu.php");
 ?>
 
-<table width="80%" border="0" align="center">
+<table align="center" width="90%">
     <tr>
         <td>
-            <h3>ฟอร์มจัดการคณะ</h3>
-            <form action="./faculty_proadd.php" method="post">
-            <table width="90%">
-                <tr>
-                    <td valign="top"> ชื่อคณะ</td>
-                    <td valign="top"><input type="text" name="fac_name" size="30"></td>
-                </tr>
-                <tr>
-                    <td valign="top"> รายละเอียด</td>
-                    <td valign="top"><textarea name="fac_detail" rows="5" cols="29"></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="right">
-                        <button onlickonclick="history.go(-1);" value="ยกเลิก">ยกเลิก</button>
-                        <input type="submit" value="บันทึก">
-                    </td>
-                </tr>
-            </table>
+            <h3>เพิ่มข้อมูลคณะ</h3>
+            <!-- form -->
+            <form action="faculty_proadd.php" method="post">
+                <table>
+                    <tr>
+                        <td>ชื่อคณะ </td>
+                        <td><input type="text" name="fac_name" size="25"></td>
+                    </tr>
+                    <tr>
+                        <td>รายละเอียด</td>
+                        <td><textarea name="fac_detail" cols="25" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><a href="./faculty_show.php" class="button-2">ยกเลิก</a></td>
+                        <td><input type="submit" value="บันทึก" class="button-2"></td>
+                    </tr>
+                </table>
             </form>
         </td>
     </tr>
 </table>
 
-</table>
-
-<!-- footer -->
 <?php
     include("./footer.php");
 ?>
