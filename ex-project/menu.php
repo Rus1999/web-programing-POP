@@ -8,5 +8,6 @@
                 <hr>
                 - <a href="./faculty_show.php">จัดการข้อมูลคณะ</a><br>
                 - <a href="./prefix_show.php">จัดการคำนำหน้าชื่อ</a><br>
+                - <a href="./member_show.php">จัดการข้อมูลสมาชิก</a><br>
             </td>
             <td valign="top">
