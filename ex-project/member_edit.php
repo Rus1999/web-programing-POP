@@ -18,7 +18,7 @@
         $mem_user = $row['mem_user'];
         $mem_password = $row['mem_password'];
         $mem_status = $row['mem_status'];
-        $prefix_id = $row['prefix_id'];
+        $mprefix_id = $row['prefix_id'];
     }
 ?>
 
@@ -59,11 +59,50 @@
                     </tr>
                     <tr>
                         <td>สถานะ</td>
-                        <td><input type="text" name="mem_status" value="<?php echo "$mem_status" ?>"></td>
+                        <?php
+                            $st1 = "";
+                            $st2 = "";
+                            $st3 = "";
+                            if ($mem_status=="1"){
+                                $st1 = "checked";
+                            }
+                            else if($mem_status=="2"){
+                                $st2 = "checked";
+                            }else if($mem_status=="3"){
+                                $st3 = "checked";
+                            }
+                        ?>
+                        <td>
+                            <input type="radio" name="mem_status" value="1" <?php echo $st1 ?>> ผู้ดูแลระบบ
+                            <input type="radio" name="mem_status" value="2" <?php echo $st2 ?>> พนักงาน
+                            <input type="radio" name="mem_status" value="3" <?php echo $st3 ?>> ผู้ใช้ทั่วไป
+                        </td>
                     </tr>
                     <tr>
-                        <td>รหัสคำนำหน้าชื่อ</td>
-                        <td><input type="text" name="prefix_id" value="<?php echo "$prefix_id" ?>"></td>
+                        <td>คำนำหน้าชื่อ</td>
+                        <td>
+                            <select name="prefix_id">
+                                <?php
+                                    $sql = "select * from prefix";
+                                    $result = $mysqli->query($sql);
+                                    
+                                    while ($row = $result->fetch_assoc()){
+                                        $prefix_id= $row['prefix_id'];
+                                        $prefix_nameTH= $row['prefix_nameTH'];
+                                        $prefix_nameEN= $row['prefix_nameEN'];
+                                        
+                                        $pr = "";
+                                        if($mprefix_id==$prefix_id){
+                                            $pr = "selected";
+                                        }
+
+                                        echo "
+                                        <option value=\"$prefix_id\" $pr>$prefix_nameTH</option>
+                                        ";
+                                    }
+                                ?>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td><a href="./member_show.php" class="button-2">ยกเลิก</a></td>

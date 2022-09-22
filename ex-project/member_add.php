@@ -1,6 +1,8 @@
 <?php
     include("./header.php");
     include("./menu.php");
+    // initialize connection
+    include("./sqliConnect.php");
 ?>
 
 <table align="center" width="90%">
@@ -39,11 +41,34 @@
                     </tr>
                     <tr>
                         <td>สถานะ</td>
-                        <td><input type="text" name="mem_status"></td>
+                        <td>
+                            <input type="radio" name="mem_status" value="1"> ผู้ดูแลระบบ
+                            <input type="radio" name="mem_status" value="2"> พนักงาน
+                            <input type="radio" name="mem_status" value="3"> ผู้ใช้ทั่วไป
+                        </td>
                     </tr>
                     <tr>
-                        <td>รหัสคำนำหน้าชื่อ</td>
-                        <td><input type="text" name="prefix_id"></td>
+                        <td>คำนำหน้าชื่อ</td>
+                        <td>
+                            <select name="prefix_id">
+                                <?php
+                                    $sql = "select * from prefix";
+                                    $result = $mysqli->query($sql);
+
+                                    while ($row = $result->fetch_assoc()){
+                                        $prefix_id= $row['prefix_id'];
+                                        $prefix_nameTH= $row['prefix_nameTH'];
+                                        $prefix_nameEN= $row['prefix_nameEN'];
+                                        
+                                        echo "
+                                        <option value=\"$prefix_id\">$prefix_nameTH</option>
+                                        ";
+                                    }
+                                ?>
+                            </select>
+                        </td>
+
+                        
                     </tr>
                     <tr>
                         <td><a href="./member_show.php" class="button-2">ยกเลิก</a></td>
@@ -56,5 +81,7 @@
 </table>
 
 <?php
+    // close connection
+    $mysqli->close();
     include("./footer.php");
 ?>
