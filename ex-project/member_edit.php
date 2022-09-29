@@ -75,7 +75,7 @@
                         <td>
                             <input type="radio" name="mem_status" value="1" <?php echo $st1 ?>> ผู้ดูแลระบบ
                             <input type="radio" name="mem_status" value="2" <?php echo $st2 ?>> พนักงาน
-                            <input type="radio" name="mem_status" value="3" <?php echo $st3 ?>> ผู้ใช้ทั่วไป
+                            <input type="radio" name="mem_status" value="3" <?php echo $st3 ?>> ผู้บริหาร
                         </td>
                     </tr>
                     <tr>

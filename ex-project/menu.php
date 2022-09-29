@@ -19,16 +19,19 @@
                             - <a href=\"./faculty_show.php\">จัดการข้อมูลคณะ</a><br>
                             - <a href=\"./prefix_show.php\">จัดการคำนำหน้าชื่อ</a><br>
                             - <a href=\"./member_show.php\">จัดการข้อมูลสมาชิก</a><br>
+                            - <a href=\"./project_show.php\">ขออนุมััติโครงการ</a><br>
                             - <a href=\"./logout.php\">ออกจากระบบ</a><br>
                         ";
                     
                         else if($_SESSION['status']=="2"){
                             echo "
+                                - <a href=\"./project_show.php\">ขออนุมัติโครงการ</a><br>
                                 - <a href=\"./logout.php\">ออกจากระบบ</a><br>
                             ";
                         }
                         else if($_SESSION['status']=="3"){
                             echo "
+                                - <a href=\"./project_allow.php\">อนุมัติโครงการ</a><br>
                                 - <a href=\"./logout.php\">ออกจากระบบ</a><br>
                             ";
                         }

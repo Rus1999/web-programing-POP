@@ -15,8 +15,10 @@
                     <td>รหัส</td>
                     <td>ชื่อ</td>
                     <td>นามสกุล</td>
-                    <td>เบอร์โทรศัพท์</td>
-                    <td>อีเมล์</td>
+                    <!-- 
+                        <td>เบอร์โทรศัพท์</td>
+                        <td>อีเมล์</td> 
+                    -->
                     <td>ชื่อผู้ใช้งาน</td>
                     <td>รหัสผ่าน</td>
                     <td>สถานะ</td>
@@ -24,7 +26,7 @@
                     <td>จัดการ</td>
                 </tr>      
                 <?php
-                    $sql = "select * from member;";
+                    $sql = "select * from member,prefix where member.prefix_id=prefix.prefix_id;";
                     $result = $mysqli->query($sql);
 
                     while($row = $result->fetch_assoc()){
@@ -36,19 +38,30 @@
                         $mem_user = $row['mem_user'];
                         $mem_password = $row['mem_password'];
                         $mem_status = $row['mem_status'];
-                        $prefix_id = $row['prefix_id'];
+                        $prefix_nameTH = $row['prefix_nameTH'];
+
+                        $status = "";
+                        if ($mem_status == "1") {
+                            $status = "ผู้ดูแลระบบ";
+                        }elseif ($mem_status == "2"){
+                            $status = "พนักงาน";
+                        }elseif ($mem_status == "3"){
+                            $status = "ผู้่บริหาร";
+                        }
 
                         echo "
                             <tr>
                                 <td>$mem_id</td>
                                 <td>$mem_fname</td>
                                 <td>$mem_lname</td>
+                                <!--
                                 <td>$mem_telephone</td>
                                 <td>$mem_email</td>
+                                -->
                                 <td>$mem_user</td>
                                 <td>$mem_password</td>
-                                <td>$mem_status</td>
-                                <td>$prefix_id</td>
+                                <td>$status</td>
+                                <td>$prefix_nameTH</td>
                                 <td>
                                     <a href=\"./member_edit.php?mem_id=$mem_id\">แก้ไข</a>
                                     |
