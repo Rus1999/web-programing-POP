@@ -3,7 +3,6 @@
     include("./menu.php");
     // connection
     include("./sqliConnect.php");
-
     isset($_GET['mem_id'])?$mem_id=$_GET['mem_id']:$mem_id="";
 
     $sql = "select * from member where mem_id='$mem_id';";

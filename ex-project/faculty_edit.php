@@ -3,7 +3,7 @@
     include("./menu.php");
     // initialize sqli connection
     include("./sqliConnect.php");
-
+    
     // selectr row according to fac_id
     isset($_GET['fac_id'])?$fac_id=$_GET['fac_id']:$fac_id="";
 

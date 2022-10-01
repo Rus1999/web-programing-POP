@@ -3,7 +3,6 @@
     // initialize connection
     include("./sqliConnect.php");
 
-
     isset($_POST['user'])?$user=$_POST['user']:$user="";
     isset($_POST['password'])?$password=$_POST['password']:$password="";
 

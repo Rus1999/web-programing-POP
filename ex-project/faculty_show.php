@@ -1,10 +1,7 @@
 <?php
     include("./header.php");
     include("./menu.php");
-?>
-
-<!-- sql initialize connection -->
-<?php
+    // connection
     include("./sqliConnect.php");
 ?>
 

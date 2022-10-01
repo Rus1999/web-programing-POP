@@ -1,6 +1,8 @@
 <?php
     include("./header.php");
     include("./menu.php");
+    // connection
+    include("./sqliConnect.php");
     if(isset($_GET['err'])){
         $streer=$_GET['err'];
     }else {
@@ -11,8 +13,6 @@
         echo $_SESSION['fname']." ".$_SESSION['lname'];
     }else {
 ?>
-
-
 
 <!-- content -->
 <table align="center">
